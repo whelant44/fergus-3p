@@ -1,0 +1,15 @@
+node_modules/
+data/goals.json
+
+# IDE
+.idea/
+*.iml
+
+# Environment variables
+.env
+
+# Internal planning docs
+3p_plan.md
+
+# macOS
+.DS_Store
