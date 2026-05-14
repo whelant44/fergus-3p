@@ -19,8 +19,9 @@ function getSessionUser(req) {
 }
 
 // ---------- JSON file helpers ----------
-async function readJSON(filename) {
+async function readJSON(filename, defaultValue = {}) {
   const file = Bun.file(join(DATA_DIR, filename));
+  if (!(await file.exists())) return defaultValue;
   return await file.json();
 }
 
